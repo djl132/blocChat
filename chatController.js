@@ -6,5 +6,5 @@
   
   angular
     .module('blocChat')
-    .controller('chatController', ['Rooms', chatController]);
+    .controller('chatController', ['$scope','Rooms', chatController]);
 })();

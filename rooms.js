@@ -1,7 +1,9 @@
+
+//A Factory Service that exposes backend room information to eh chatController managing the chat app's
 (function() {
-  function Room($fireBaseArray){
-    var ref = firebase.database().ref().child('rooms'); //reference future room(location)
-    var rooms = $firebaseArray(ref);//gets data on rooms in form of js array
+  function Room(firebase,$fireBaseArray){
+    var ref = firebase.database().ref().child('rooms'); //get json array of rooms aka accessing rooms array in the root database json object.
+    var rooms = $firebaseArray(ref);//gets jsarray-form of rooms array
     
     //return array with data
     return {
